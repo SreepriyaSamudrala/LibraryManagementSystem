@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Library Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Chatbot Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfcfa;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 20px 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, #5f27cd, #01a3a4);
+            padding: 15px 0;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 17px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #feca57;
+            transition: 0.4s ease;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar a:hover {
+            color: #feca57;
+        }
+
+        /* Title Section */
+        .title-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .title-section h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .title-section p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* About Card */
+        .about-box {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .about-box p {
+            margin-bottom: 18px;
+            color: #333;
+        }
+
+        .about-box strong {
+            color: #2c3e50;
+        }
+
+        /* Back Link */
+        .back-link {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .back-link a {
+            color: #2575fc;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar a {
+                margin: 10px 0;
+            }
+
+            .about-box {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+        /* Footer */
+        .footer {
+            background-color: #222f3e;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>📘 Library Management System</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/home/">Home</a>
+        <a href="/addbooks/">Add Books</a>
+        <a href="/viewbooks/">View Books</a>
+        <a href="/contactus/">Contact Us</a>
+        <a href="/aboutus/">About Us</a>
+    </div>
+
+    <!-- Title -->
+    <div class="title-section">
+        <h2>About Our Library Management System</h2>
+        <p>Learn more about what this project is and why it exists</p>
+    </div>
+
+    <!-- About Content Section -->
+    <div class="about-box">
+        <p>
+            The <strong>Library Management System</strong> is a Django-based web application designed to help students and librarians manage the catalog of books efficiently.
+            The system allows users to add, view, and keep track of books and essential information such as title, author, and ISBN.
+        </p>
+        <p>
+            This project is built as part of an academic task to demonstrate full-stack development skills using Python (Django) for backend logic and HTML with inline CSS for frontend design.
+            It offers a simple and clean interface, making it suitable for beginners and educational use.
+        </p>
+        <p>
+            Future enhancements may include user login functionality, book availability status, return deadlines, and database filtering options.
+        </p>
+    </div>
+
+    <!-- Back to Home -->
+    <div class="back-link">
+        <a href="/home/">← Back to Home</a>
+    </div>
+<!-- Chatbot Floating Button -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+  <button onclick="toggleChat()" 
+    style="background-color: #01a3a4; color: white; border: none; padding: 16px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); font-size: 20px;">
+    <i class="fas fa-robot"></i>
+  </button>
+</div>
+
+<!-- Chatbox Panel -->
+<div id="chatbox" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 320px; background: white; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); z-index: 999;">
+  <!-- Header -->
+  <div style="background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; padding: 12px 16px; border-radius: 12px 12px 0 0; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+    <span><i class="fas fa-robot"></i> Library Bot</span>
+    <span onclick="toggleChat()" style="cursor: pointer;"><i class="fas fa-times"></i></span>
+  </div>
+
+  <!-- Chat Body -->
+  <div id="chat-content" style="padding: 12px 16px; height: 230px; overflow-y: auto; font-size: 14px;">
+    <p><strong>Bot:</strong> Hello! 🤖 How can I help you today?</p>
+  </div>
+
+  <!-- Input -->
+  <div style="padding: 10px 16px; border-top: 1px solid #eee; display: flex; gap: 8px;">
+    <input id="user-input" type="text" placeholder="Type a message..." 
+      style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 6px;">
+    <button onclick="sendMessage()" 
+      style="background-color: #5f27cd; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>
+
+<!-- JavaScript Logic -->
+<script>
+  function toggleChat() {
+    const chatbox = document.getElementById('chatbox');
+    chatbox.style.display = (chatbox.style.display === 'none' || chatbox.style.display === '') ? 'block' : 'none';
+  }
+
+  function sendMessage() {
+    const input = document.getElementById('user-input');
+    const chat = document.getElementById('chat-content');
+    const userMsg = input.value.trim();
+
+    if (userMsg !== '') {
+      chat.innerHTML += `<p><strong>You:</strong> ${userMsg}</p>`;
+      input.value = '';
+      chat.scrollTop = chat.scrollHeight;
+
+      // Simulate Bot Response
+      setTimeout(() => {
+        const reply = getBotReply(userMsg.toLowerCase());
+        chat.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+        chat.scrollTop = chat.scrollHeight;
+      }, 600);
+    }
+  }
+
+  function getBotReply(message) {
+    if (message.includes('add book')) return "📘 Click 'Add Books' in the menu to register a new book.";
+    if (message.includes('view') || message.includes('available')) return "📚 Visit 'View Books' to check the library catalog.";
+    if (message.includes('contact') || message.includes('email') || message.includes('phone')) return "📞 +91 98765 43210 | ✉️ support@librarysystem.com";
+    if (message.includes('location') || message.includes('where')) return "📍 Library Block, Knowledge City, Hyderabad.";
+    if (message.includes('hours') || message.includes('timing') || message.includes('open')) return "⏰ Open Monday to Friday, 9 AM to 6 PM.";
+    if (message.includes('about')) return "ℹ️ This system is built to manage books using Django and HTML.";
+    if (message.includes('login') || message.includes('account')) return "🔒 Login system is coming soon!";
+    if (message.includes('help') || message.includes('support')) return "🤖 I can help with book info, timings, contact details, and more!";
+    return "🤔 I'm not sure. Try asking about adding books, timings, or contact info!";
+  }
+</script>
+<!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Library Management System. Crafted with ❤️ for readers and learners.
+    </div>
+</body>
+</html>
