@@ -190,4 +190,4 @@ python manage.py createsuperuser
 
 
 
-![image alt](https://github.com/SreepriyaSamudrala/LibraryManagementSystem/blob/main/Screenshot%202025-07-26%20165839.png?raw=true)
+![image alt](https://github.com/SreepriyaSamudrala/LibraryManagementSystem/blob/0ef85f9dc3505330c3b8da1b1f09b06aa261b511/Screenshot%202025-07-26%20165839.png)
