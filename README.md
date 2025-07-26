@@ -35,6 +35,7 @@ In the opened Command Prompt, type:
 pip install django==2.1.7
 
 4. Start Project and App
+  ```bash
 In the same CMD window:
 
 bash
