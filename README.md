@@ -1,3 +1,5 @@
+
+![image alt](https://github.com/SreepriyaSamudrala/LibraryManagementSystem/blob/0ef85f9dc3505330c3b8da1b1f09b06aa261b511/Screenshot%202025-07-26%20165839.png)
 📚 Library Management System using Django
 
 This is a **Library Management System** developed using **Python 3.7.2** and **Django 2.1.7**. It allows you to manage books, users, and records in a library efficiently.
@@ -30,7 +32,6 @@ Go inside the folder → click the **address bar** → type `cmd` → hit **Ente
 
 In the opened Command Prompt, type:
 
-```bash
 pip install django==2.1.7
 
 4. Start Project and App
@@ -188,6 +189,3 @@ python manage.py migrate
 # Create admin account
 python manage.py createsuperuser
 
-
-
-![image alt](https://github.com/SreepriyaSamudrala/LibraryManagementSystem/blob/0ef85f9dc3505330c3b8da1b1f09b06aa261b511/Screenshot%202025-07-26%20165839.png)
